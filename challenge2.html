@@ -17,6 +17,7 @@
             margin-right: auto;
             background-image: url("images/bg-2.png");
             background-size: cover;
+            z-index: 1;
 
 
         }
@@ -45,16 +46,41 @@
             padding-top: 50px;
             padding-right: 40px;
             color: white;
+            width: 50px;
         }
+
+        div#headerRightL {
+
+            width: 70px;
+            height: 5px;
+            background-color: white;
+            position: relative;
+            right: 10px;
+            top: 7px;
+        }
+
+        #headerName {
+
+            position: relative;
+            right: 100px;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: 700;
+            letter-spacing: 4px;
+
+        }
+
 
         /* End of Header */
 
         div#content {
 
             width: 800px;
-            height: 470px;
+            height: 500px;
             /* background-color: turquoise; */
             box-sizing: border-box;
+            position: relative;
+            
 
         }
 
@@ -63,15 +89,77 @@
             color: white;
             font-size: 100px;
             text-align: center;
+            letter-spacing: 20px;
+            font-family: sans-serif;
+            font-weight: 900;
 
         }
 
 
+        div#line1{
+                width: 430px;
+                height: 5px;
+                background-color: white;
+                position: relative;
+                left: 320px;
+                top: 10px;
+        }
+
+        div#line2{
+                width: 390px;
+                height: 5px;
+                background-color: white;
+                position: relative;
+                left: 160px;
+                top: 15px;
+        }
+
+        div#shoe{
+
+            width: 330px;
+            height: 180px;
+            background-image: url("images/shoes.png");
+            background-size: cover;
+            position: absolute;
+            z-index: 3;
+            left: 360px;
+            top: 0px;
+
+        }
+
+        div#moon {
+
+            width: 180px;
+            height: 170px;
+            background-image: url("images/moon.png");
+            background-size: cover;
+            position: absolute;
+            z-index: 3;
+            left: 250px;
+            top: 130px;
+
+        }
+
+        div#pineapple{
+
+            width: 260px;
+            height: 280px;
+            background-image: url("images/pineapple.png");
+            background-size: cover;
+            position: absolute;
+            z-index: 3;
+            left: 385px;
+            top: 190px;
+            transform: rotate(8deg);
+
+        }
+
+        /* End of Content */
 
         div#footer {
 
             width: 800px;
-            height: 250px;
+            height: 150px;
             /* background-color: turquoise; */
             box-sizing: border-box;
 
@@ -86,14 +174,101 @@
             color: white;
         }
 
+        div#footerLine1{
+
+            width: 30px;
+            height: 5px;
+            background-color: white;
+            position: relative;
+            left: 110px;
+            top: 45px;
+
+        }
+
         div#footerRight {
 
+            height: 150px;
             float: right;
-            padding-top: 50px;
+            padding-top: 0px;
             padding-right: 40px;
             color: white;
+            position: relative;
+            box-sizing: content-box;
         }
        
+        #footerLeftP{
+
+            width: 100px;
+            font-size: 10px;
+            font-family: sans-serif;
+            font-weight: 800;
+            letter-spacing: 2px;
+            position: relative;
+            left: 110px;
+            top: 50px;
+
+        }
+
+        div#footerLine2{
+
+            width: 50px;
+            height: 5px;
+            background-color: white;
+            position: relative;
+            right: 60px;
+            bottom: 30px;
+
+        }
+
+        div#footerLine3{
+
+            width: 5px;
+            height: 170px;
+            background-color: white;
+            position: relative;
+            right: 80px;
+            top: 45px;
+        }
+
+        div#footerRight h1{
+
+            right: 60px;
+            bottom: 190px;
+            position: relative;
+            font-size: 18px;
+            letter-spacing: 4px;
+            font-weight: 700;
+            font-family: sans-serif;
+
+        }
+
+        div#footerRight h2{
+
+            right: 60px;
+            bottom: 190px;
+            position: relative;
+            font-size: 11px;
+            letter-spacing: 4px;
+            font-weight: 800;
+            font-family: sans-serif;
+            margin-bottom: 18px;
+
+        }
+
+        div#footerRight p{
+
+            right: 60px;
+            bottom: 200px;
+            position: relative;
+            font-size: 8px;
+            letter-spacing: 4px;
+            font-weight: 400;
+            font-family: sans-serif;
+            /* margin-bottom: 10px; */
+
+        }
+
+
 
     </style>
 
@@ -114,7 +289,8 @@
 
             <div id="headerRight">
 
-                <p>CUBE MUSEUM</p>
+                <div id="headerRightL"></div>
+                <p id="headerName">CUBE MUSEUM</p>
 
             </div>
 
@@ -122,9 +298,15 @@
 
         <div id="content">
 
-            <h1 style= "text-align:left; padding-left:100px;">SUR</h1>
-            <h1 style= "text-align:right";>REAL</h1>
-            <h1 style= "text-align:left";>ISM</h1>
+            <div id="line1"></div>
+            <div id="shoe"></div>
+            <h1 style= "text-align:left; padding-left:160px; z-index: 4; position: relative; ">SUR</h1>
+            <h1 style= "text-align:right ; top: 15px; right: 50px; position: relative; font-size: 85px;">REAL</h1>
+            <h1 style= "text-align:left; padding-left:160px; top:20px; position: relative;";>ISM</h1>
+            <div id="moon"></div>
+            <div id="pineapple"></div>
+            <div id="line2"></div>
+
 
         </div>
 
@@ -132,13 +314,23 @@
 
             <div id="footerLeft">
 
-                <p>FREE EVENT ENTRY</p>
+                <div id="footerLine1"></div>
+                <p id="footerLeftP">FREE EVENT ENTRY</p>
 
             </div>
 
             <div id="footerRight">
 
-                <p>EXHIBITION</p>
+                <div id="footerLine2"></div>
+                <div id="footerLine3"></div>
+                <h1>EXHIBITION</h1>
+                <h2>CONTEMPORARY ARTISTS</h2>
+                <h2>MICHEAL MIND</h2>
+                <p>ARTIST. SURREAL COMMUNITY</p>
+                <h2>KELLY F DIOR</h2>
+                <p>EXHIBITIONIST</p>
+                <h2>SOIL H LUNA</h2>
+                <p>DESIGNER. CONTEMPORY ARTIST</p>
 
             </div>
 
