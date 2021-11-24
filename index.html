@@ -12,15 +12,25 @@
         div#container{
 
             width: 1000px;
-            height: 1000px;
+            height: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            
+        }
+
+        div#background-photo{
+
+            width: 800px;
+            height: 980px;
             background-image: url("images/bg-1.png");
-            /* background-size: cover; */
+            background-size: cover;
             background-repeat: no-repeat;
             position: relative;
             margin-left: auto;
             margin-right: auto;
             z-index: 1;
-            
+
         }
 
         div#hexagon1 {
@@ -31,8 +41,8 @@
             margin: 80.83px 0;
             left: 395px;
             top: 280px;
-            transform: rotate(285deg);
-            
+            transform: rotate(265deg);
+            z-index: 4;
             
         }
 
@@ -59,17 +69,134 @@
         div#hexagon2{
 
             position:absolute;
-            width: 280px; 
+            width: 140px; 
             height: 161.66px;
-            background-image: url("images/ducky3.jpeg");
-            background-size: 150px;
-            background-repeat: no-repeat;
+            margin: 80.83px 0;
+            background-color: yellow;
             z-index: 3;
             left: 660px;
-            top: 550px;
+            top: 480px;
 
         }
 
+        div#hexagon2:before,
+        div#hexagon2:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 140px solid transparent;
+            /* border-right: 140px solid transparent; */
+        }
+
+        div#hexagon2:before {
+            bottom: 100%;
+            border-bottom: 80.83px solid yellow;
+        }
+
+        div#hexagon2:after {
+            top: 100%;
+            width: 0;
+            border-top: 80.83px solid yellow;
+        }
+
+        div#hexagon3 {
+            position: absolute;
+            width: 350px; 
+            height: 202.00px;
+            background-color: #2c7dc9;
+            margin: 101.04px 0;
+            left: 500px;
+            top: 1px;
+            transform: rotate(70deg);
+            z-index: 2;
+
+        }
+
+        div#hexagon3:before,
+        div#hexagon3:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 175px solid transparent;
+            border-right: 175px solid transparent;
+        }
+
+        div#hexagon3:before {
+            bottom: 99.7%;
+            border-bottom: 101.04px solid #2c7dc9;
+        }
+
+        div#hexagon3:after {
+            top: 99.7%;
+            width: 0;
+            border-top: 101.04px solid #2c7dc9;
+        }
+
+        div#background-photo h1{
+
+            font-size: 90px;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 100;
+            padding-top: 50px;
+            padding-left: 40px;
+            padding-bottom: 0px;
+        }
+
+        div#background-photo h2{
+
+            font-size: 30px;
+            color: rgb(5, 121, 109);
+            font-family: sans-serif;
+            font-weight: 500;
+            padding-top: 0px;
+            padding-left: 40px;
+            word-spacing: 10px;
+            letter-spacing: 8px;
+            line-height: 15px;
+        }
+
+        div#background-photo p{
+
+            font-size: 15px;
+            color: rgb(3, 93, 84);
+            font-family: sans-serif;
+            font-weight: 600;
+            padding-top: 10px;
+            padding-left: 40px;
+            
+        }
+
+        div#contentText{
+
+            padding-top: 400px;
+
+        }
+
+        div#contentText p{
+
+            width: 300px;
+            height: 200px;
+            font-size: 15px;
+            color: rgb(148, 151, 151);
+            font-family: sans-serif;
+            font-weight: 500;
+            padding-top: 20px;
+            padding-left: 40px;
+            box-sizing: border-box;
+
+        }
+
+        div#companyName h3{
+
+            font-size: 15px;
+            color: rgb(1, 122, 122);
+            font-family: sans-serif;
+            font-weight: 600;
+            padding-top: 130px;
+            padding-left: 50px;
+
+        }       
 
     </style>
 
@@ -79,10 +206,37 @@
 
     <div id="container">
 
-        <div id="hexagon1"></div>
+        
+        <div id="background-photo">
 
-        <div id="hexagon2"></div>
+            <h1>POSTER</h1>
+            <h2>SPACE HERE</h2>
+            <p>lorem dummy text</p>
 
+            <div id="hexagon1"></div>
+
+            <div id="hexagon2"></div>
+
+            <div id="hexagon3"></div>
+
+            <div id="contentText">
+
+                <h2>TITLE TEXT</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+
+            </div>
+
+            <div id="companyName">
+
+                <h3>www.companyname.com</h3>
+
+            </div>
+
+
+
+        </div>
+
+        
 
     </div>
 
